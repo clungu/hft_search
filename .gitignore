@@ -1,0 +1,27 @@
+# Package Files #
+*.jar
+*.war
+*.ear
+
+#Build Classes
+*.class
+target
+
+#Intelij IDEA
+*.iml
+*.ipr
+*.iws
+.idea
+
+#Eclipse
+*/.classpath
+*/.project
+*/.settings
+
+#Android
+*/gen/*
+*/out/*
+*/bin/*
+
+#Git
+#.gitignore
