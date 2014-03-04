@@ -13,7 +13,8 @@ from datetime import datetime
         timestamp : 1234567890
         event: depth
         value: { ask ... }
-    }
+    },
+    {
         timestamp : 1234567891
         event: trade
         value: { trade ... }
@@ -31,7 +32,8 @@ def writeDepthEvent(file, lastContent) :
             })+"\n")
         return content
     except:
-        pass
+        return lastContent
+
 
 def writeTradeEvents(file, lastTrades) :
     try:
@@ -46,7 +48,7 @@ def writeTradeEvents(file, lastTrades) :
                 })+"\n")
         return trades
     except:
-        pass
+        return lastTrades
 
 start = time.time()
 content = json.loads("{}")
